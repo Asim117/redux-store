@@ -25,7 +25,7 @@ const ProductDetails = () => {
   };
 
   useEffect(() => {
-    fetchProduct();
+    if(productId && productId!=="") fetchProduct();
     return () => {
       dispatch(removeSelectedProduct());
     };
